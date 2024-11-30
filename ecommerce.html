@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menu-search">
+        <div class="menu-icon">☰</div>
+        <div class="search-bar">
+          <input type="text" placeholder="Pesquisar" />
+        </div>
+      </div>
+      <div class="logo">
+        <img src="img/Logo.png" alt="Logo InnovaTech" />
+      </div>
+      <div class="icons">
+        <img src="img/coração.png" alt="Ícone de coração" />
+        <div class="cart-dropdown">
+          <img src="img/carrinho.png" alt="Ícone de carrinho" class="cart-icon" />
+          <div class="cart-content">
+            <h4>Seu Carrinho</h4>
+            <ul id="cart-items"></ul>
+            <div id="cart-total">Total: R$ 0,00</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Monitores</a></li>
+        <li><a href="#">Mouses</a></li>
+        <li><a href="#">Placa de vídeo</a></li>
+        <li><a href="#">Computadores</a></li>
+        <li><a href="#">Smartphones</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="product-container">
+        <div class="product-card">
+          <div class="discount">29%</div>
+          <div class="stock">
+            APENAS <br />
+            9 UNID.
+          </div>
+          <div class="rating">★★★★★ (8)</div>
+          <img
+            src="img/monitor.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Monitor Profissional BenQ 23.8" LED 2K QHD, IPS, Widescreen,
+            DisplayPort e...
+          </div>
+          <div class="old-price">R$ 3.777,77</div>
+          <div class="price">R$ 2.399,99</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 266,66</b> <br><br>
+          </div>
+          <button class="buy-button" onclick="addToCart('Monitor Profissional BenQ!', 2399.99)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="rating">★★★★★ (8)
+            <div class="icons">
+              <span title="Favoritar ❤️">❤️</span>
+              <span title="Adicionar ao carrinho 🛒">🛒</span>
+            </div>
+          </div>
+          <img
+            src="img/mouse.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Mouse Gamer sem fio Logitech G309 LIGHTSPEED com Switches
+            LIGHTFORCE… Sensor HERO 25K, 6 botões
+          </div>
+          <div class="old-price">R$ 3.777,77</div>
+          <div class="price">R$ 2.399,99</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 266,66</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('Mouse Gamer sem fio Logitech', 2399.99)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">19%</div>
+          <div class="stock">
+            EM <br />
+            ESTOQUE
+          </div>
+          <div class="rating">★★★★★ (3)</div>
+          <img
+            src="img/teclado2.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Teclado Mecânico Gamer Machenike K500-B61, RGB, Switch Huano Brown,
+            Cinz… - MAC-K500-B61GBR-WW
+          </div>
+          <div class="old-price">R$ 219,99</div>
+          <div class="price">R$ 175,99</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>7x de R$ 25,14</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('Teclado Mecânico Gamer', 175.99)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">13%</div>
+          <div class="stock">
+            APENAS <br />
+            61 UNID.
+          </div>
+          <div class="rating">★★★★★ (40)</div>
+          <img
+            src="img/monitor2.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Monitor Gamer Curvo Concórdia, 23.8" Led Full HD, 100Hz, 5ms, HDMI,
+            VGA, US… - Cz238f
+          </div>
+          <div class="old-price">R$ 659,00</div>
+          <div class="price">R$ 569,00</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 56,90</b> <br><br>
+          </div>
+          <button class="buy-button" onclick="addToCart('Monitor Gamer Curvo', 569.00)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">16%</div>
+          <div class="stock">
+            EM <br />
+            ESTOQUE
+          </div>
+          <div class="rating">★★★★★ (8)</div>
+          <img
+            src="img/monitor3.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Monitor Gamer Curvo GAMING MG320 27", 180Hz, Full Hd, 1ms,
+            DisplayPort e… HDMI, Adaptive Sync, Ajuste
+          </div>
+          <div class="old-price">R$ 1.066,66</div>
+          <div class="price">R$ 799,99</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 88,88</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('Monitor Gamer Curvo GAMING', 799.99)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">29%</div>
+          <div class="stock">
+            APENAS <br />
+            9 UNID.
+          </div>
+          <div class="rating">★★★★ (23)</div>
+          <img
+            src="img/teclado.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Kit Teclado e Mouse Sem Fio Dell Pro, 4000 DPI, ABNT2, Preto -
+            KM5221W
+          </div>
+          <div class="old-price">R$ 400,00</div>
+          <div class="price">R$ 209,99</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>9x de R$ 26,51</b> <br><br>
+          </div>
+          <button class="buy-button" onclick="addToCart('kit Teclado e Mouse', 209.99)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">9%</div>
+          <div class="stock">
+            EM <br />
+            ESTOQUE
+          </div>
+          <div class="rating">★★★★★ (8)</div>
+          <img
+            src="img/pc gamer.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            PC Gamer Neologic AMD Ryzen 5 5500, 16GB RAM, RTX 3060 12GB, SSD
+            480GB… M.2, 600w, 80 Plus -
+          </div>
+          <div class="old-price">R$ 5.388,90</div>
+          <div class="price">R$ 4.899,00</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 489,90</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('PC Gamer Neologic', 4899.00)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">29%</div>
+          <div class="stock">
+            APENAS <br />
+            9 UNID.
+          </div>
+          <div class="rating">★★★★★ (15)</div>
+          <img
+            src="img/placa de video.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Placa de Vídeo RTX 4060 AERO OC Gigabyte NVIDIA GeForce, 8GB GDDR6,
+            RGB,… DLSS, Ray Tracing, Branco -
+          </div>
+          <div class="old-price">R$ 2.870,46</div>
+          <div class="price">R$ 2.239,99</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 254,54</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('Placa de Video RTX', 2239.99)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">13%</div>
+          <div class="stock">
+            APENAS <br />
+            3 UNID.
+          </div>
+          <div class="rating">★★★★★ (138)</div>
+          <img
+            src="img/mouse2.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Mouse Sem Fio Gamer Logitech G PRO X Superlight, Lightspeed,… 25000
+            DPI, 5 Botões, Preto -
+          </div>
+          <div class="old-price">R$ 789,46</div>
+          <div class="price">R$ 649,99</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 68,42</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('Mouse Sem Fio Gamer G PRO X', 649.99)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">29%</div>
+          <div class="stock">
+            APENAS <br />
+            9 UNID.
+          </div>
+          <div class="rating">★★★★★ (1)</div>
+          <img
+            src="img/celular.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Smartphone Samsung Galaxy A55, 5G, 128GB, 8GB RAM, Câmera Tripla
+            50MP … Selfie 32MP, Tela 6.6", Azul
+          </div>
+          <div class="old-price">R$ 3.777,77</div>
+          <div class="price">R$ 1.799,10</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 199,90</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('Smartphone Samsung Galaxy A55', 1799.10)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">33%</div>
+          <div class="stock">
+            EM <br />
+            ESTOQUE
+          </div>
+          <div class="rating">★★★★★ (8)</div>
+          <img
+            src="img/robo aspirador.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Robô aspirador Smart 900 - 220V, Branco - IR360°, Controle
+            via app,… Recipiente dispensador de
+          </div>
+          <div class="old-price">R$ 3.111,00</div>
+          <div class="price">R$ 1.849,90</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 205,54</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('Robô aspirador smart', 1849.90)">COMPRAR</button>
+        </div>
+        <div class="product-card">
+          <div class="discount">48%</div>
+          <div class="stock">
+            EM <br />
+            ESTOQUE
+          </div>
+          <div class="rating">★★★★★ (8)</div>
+          <img
+            src="img/processador.png"
+            alt="Imagem do Produto"
+            class="product-image"
+          />
+          <div class="product-title">
+            Processador AMD Ryzen 7 5700X, 3.4GHz (4.6GHz Max Turbo), Cache
+            36MB, AM4,… Sem Vídeo - 100-
+          </div>
+          <div class="old-price">R$ 2.648,64</div>
+          <div class="price">R$ 1.199,99</div>
+          <div class="payment-info">
+            À vista no PIX <br />
+            ou até <b>10x de R$ 136,36</b>
+          </div>
+          <button class="buy-button" onclick="addToCart('Processador AMD Ryzen', 1199.99)">COMPRAR</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="section">
+        <h4>Departamentos</h4>
+        <p onclick="location.href = 'ecommerce.html'">
+          Hardware<br />Celular e Smartphone<br />Teclado e Mouse<br />Computadores<br />Consoles
+          e Games<br />TV<br />Notebook
+        </p>
+        <div class="social-icons">
+          <img src="img/cartao.png" alt="Cartão" />
+          <img src="img/pix.png" alt="Pix" />
+        </div>
+      </div>
+      <div class="section">
+        <h4>Novidades e Promoções</h4>
+        <p>
+          Seja Prime<br />Black Friday<br />Oferta do dia<br />Gift Card
+          KaBuM!<br />Tecnologia 5G<br />Venda na InnovaTech!<br />Cupons<br />Lojas
+          Parceiras
+        </p>
+      </div>
+      <div class="section">
+        <br /><br /><br /><br />
+        <p onclick="location.href = 'quemSomos.html'">Sobre Nós</p>
+        <p><br />Atendimento<br /><br />Duvidas Frequentes</p>
+      </div>
+      <div class="section">
+        <h4>Fale Conosco!</h4>
+        <img src="img/QRcode.png" alt="QR Code" />
+        <div class="social-icons">
+          <img src="img/face.png" alt="Facebook" />
+          <img src="img/Twitter.png" alt="Twitter" />
+          <img src="img/insta.png" alt="Instagram" />
+          <img src="img/YT.png" alt="YouTube" />
+        </div>
+      </div>
+    </footer>
+
+    <div id="notification"></div>
+
+    <script>
+    // Array para armazenar itens no carrinho
+    let cart = [];
+
+    function addToCart(productName, productPrice) {
+      // Adiciona o produto ao carrinho
+      cart.push({ name: productName, price: productPrice });
+      alert(`${productName} foi adicionado ao carrinho!`);
+    
+      // Atualiza o contador e total do carrinho
+      updateCartUI();
+    }
+    
+    function updateCartUI() {
+      const cartCount = document.getElementById("cart-count");
+      const cartTotal = document.getElementById("cart-total");
+    
+      // Atualiza o número de itens
+      cartCount.textContent = cart.length;
+    
+      // Calcula o total
+      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      if (cartTotal) cartTotal.textContent = total.toFixed(2);
+    }
+
+// Mostrar notificação
+function showNotification(message) {
+  const notification = document.getElementById("notification");
+  notification.innerText = message;
+  notification.style.display = "block";
+
+  // Ocultar notificação após 3 segundos
+  setTimeout(() => {
+    notification.style.display = "none";
+  }, 3000);
+}
+
+  </script>
+
+  </body>
+</html>
